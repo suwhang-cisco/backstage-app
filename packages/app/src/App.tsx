@@ -46,6 +46,7 @@ import {
   UnifiedThemeProvider
 } from "@backstage/theme";
 import { TerraformPluginPage } from '@internal/plugin-terraform';
+import { ChatAssistantPage } from '@backstage-community/plugin-agent-forge';
 
 const app = createApp({
   apis,
@@ -158,6 +159,7 @@ export default app.createRoot(
     <OAuthRequestDialog />
     <AppRouter>
       <Root>{routes}</Root>
+      <ChatAssistantPage />
     </AppRouter>
   </>,
 );
