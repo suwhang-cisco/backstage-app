@@ -159,8 +159,17 @@ export default app.createRoot(
     <OAuthRequestDialog />
     <AppRouter>
       <Root>{routes}</Root>
-      <ChatAssistantPage />
     </AppRouter>
+    <div
+      style={{
+        position: 'fixed',
+        bottom: 0,
+        right: 0,
+        zIndex: 9999,
+      }}
+    >
+      <ChatAssistantPage />
+    </div>
   </>,
 );
 
