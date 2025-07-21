@@ -47,6 +47,20 @@ import {
 } from "@backstage/theme";
 import { TerraformPluginPage } from '@internal/plugin-terraform';
 import { ChatAssistantPage } from '@backstage-community/plugin-agent-forge';
+import { makeStyles } from '@material-ui/core/styles';
+
+const useGlobalStyles = makeStyles({
+  '@global': {
+    '#agent-forge-override p': {
+      color: 'black !important',
+    },
+  },
+});
+
+const GlobalStyles = () => {
+  useGlobalStyles();
+  return null;
+};
 
 const app = createApp({
   apis,
@@ -139,6 +153,7 @@ const AuthenticatedChatAssistant: React.FC = () => {
 
   return (
     <div
+      id="agent-forge-override"
       style={{
         position: 'fixed',
         bottom: 0,
@@ -198,6 +213,7 @@ const routes = (
 
 export default app.createRoot(
   <>
+    <GlobalStyles />
     <AlertDisplay />
     <OAuthRequestDialog />
     <AppRouter>
@@ -206,6 +222,3 @@ export default app.createRoot(
     <AuthenticatedChatAssistant />
   </>,
 );
-
-
-
