@@ -246,28 +246,14 @@ const useStyles = makeStyles(_ => ({
 
   buttonOpenChat: {
     position: 'fixed',
-    bottom: 20,
-    right: 20,
-    width: 60,
-    height: 60,
-    border: '3px solid #0366d6',
-    borderRadius: '50%',
-    backgroundColor: 'white',
-    boxShadow: '0 6px 16px rgba(0, 0, 0, 0.4)',
+    bottom: 50,
+    right: 60,
+    width: 100,
+    height: 100,
+    border: 'none',
+    backgroundColor: 'transparent',
     cursor: 'pointer',
-    zIndex: 9999,
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    transition: 'all 0.3s ease',
-    '&:hover': {
-      transform: 'scale(1.1)',
-      boxShadow: '0 8px 20px rgba(0, 0, 0, 0.5)',
-    },
-    padding: 0,
-    margin: 0,
-    overflow: 'visible',
-    transform: 'translateX(0) translateY(0)', // Override any inherited transforms
+    zIndex: 1000,
   },
 
   darkModeButton: {
