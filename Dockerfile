@@ -14,8 +14,17 @@ RUN find packages \! -name "package.json" -mindepth 2 -maxdepth 2 -exec rm -rf {
 # Stage 2 - Install dependencies and build packages
 FROM node:20-bookworm-slim AS build
 
+# Install Python and build tools needed for native modules
+RUN --mount=type=cache,target=/var/cache/apt,sharing=locked \
+    --mount=type=cache,target=/var/lib/apt,sharing=locked \
+    apt-get update && \
+    apt-get install -y --no-install-recommends python3 python3-pip python3-venv g++ build-essential
+
 USER node
 WORKDIR /app
+
+# Set Python path for node-gyp
+RUN yarn config set python /usr/bin/python3
 
 COPY --from=packages --chown=node:node /app .
 
