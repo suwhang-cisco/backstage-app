@@ -20,7 +20,7 @@ import React, {
   useEffect,
   useCallback,
 } from 'react';
-import WebexLogo from '../icons/AgentTim.png';
+import WebexLogo from '../icons/caipe.svg';
 import TypingIndicator from './TypingIndicator';
 import { FeedbackButton } from './FeedbackButton';
 import Chip from '@mui/material/Chip';

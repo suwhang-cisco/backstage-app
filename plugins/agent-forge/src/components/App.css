@@ -150,7 +150,7 @@ body.dark-mode .tab-button::before {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background: url('../icons/webex-logo.png') no-repeat center center;
+  background: url('../icons/caipe.svg') no-repeat center center;
   background-size: cover;
   width: 100px;
   height: 100px;

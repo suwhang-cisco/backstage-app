@@ -22,7 +22,7 @@ import ChatHeader from './ChatHeader';
 import ChatInput from './ChatInput';
 import ChatTabs from './ChatTabs';
 import { useState, useEffect, useRef, useMemo } from 'react';
-import WebexLogo from '../icons/AgentTim.png';
+import WebexLogo from '../icons/caipe.svg';
 import useStyles from './useStyles';
 import { ChatSuggestionOptions } from './ChatSuggestionOptions';
 import { Message, Feedback, UserResponse } from '../types';
