@@ -1,13 +1,10 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: agent-forge
-  description: Chat plugins that connect to AI agents
-  # Example for optional annotations
-  # annotations:
-  #   github.com/project-slug: backstage/backstage
-  #   backstage.io/techdocs-ref: dir:.
+  name: backstage-plugin-agent-forge
+  title: '@backstage-community/plugin-agent-forge'
+  description: Chat plugin for AI agents
 spec:
-  type: website
-  owner: sbraicu@cisco.com
   lifecycle: experimental
+  type: backstage-frontend-plugin
+  owner: maintainers

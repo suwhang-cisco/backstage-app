@@ -46,7 +46,7 @@ import {
   UnifiedThemeProvider
 } from "@backstage/theme";
 import { TerraformPluginPage } from '@internal/plugin-terraform';
-import { ChatAssistantPage } from '@backstage-community/plugin-agent-forge';
+import { ChatAssistantPage } from '@internal/plugin-agent-forge';
 import { makeStyles } from '@material-ui/core/styles';
 
 const useGlobalStyles = makeStyles({
